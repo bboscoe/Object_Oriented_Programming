@@ -7,24 +7,56 @@
   - Display the updated values of 'a' and 'b' using the pointers 'ptrA' and 'ptrB' respectively.
 */
 #include <iostream>
+#include <vector>
 using namespace std;
-int main(){
-	int a,b;
-	int *ptrA=&a;
-	int *ptrB=&b;
-	
-	cout<<"Enter first number = "; //Enter the first number
-	cin>>a;
-	
-	cout<<"Enter second number = ";
-	cin>>b;
-	
-	cout<<"the values are = "<<*ptrA<<" & "<<*ptrB<<endl;
-	
-	*ptrA=30;
-	*ptrB=40;
-	
-	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
-	
-	return 0;
+
+// Function to input a matrix
+void inputMatrix(vector<vector<double>>& matrix, int rows, int cols) {
+    cout << "Enter the matrix row by row (" << rows << "x" << cols << "):" << endl;
+    for (int i = 0; i < rows; i++) {
+        vector<double> row;
+        for (int j = 0; j < cols; j++) {
+            double value;
+            cin >> value;
+            row.push_back(value);
+        }
+        matrix.push_back(row);
+    }
+}
+
+// Function to calculate the sum of a specific column
+double sumColumn(const vector<vector<double>>& matrix, int rows, int columnIndex) {
+    double total = 0;
+    for (int i = 0; i < rows; i++) {
+        total += matrix[i][columnIndex];
+    }
+    return total;
+}
+
+// Function to display the sum of each column
+void displayColumnSums(const vector<vector<double>>& matrix, int rows, int cols) {
+    for (int j = 0; j < cols; j++) {
+        cout << "Sum of the elements at column " << j << " is " << sumColumn(matrix, rows, j) << endl;
+    }
+}
+
+int main() {
+    int rows, cols;
+
+    // Ask the user for the dimensions of the matrix
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+    cout << "Enter the number of columns: ";
+    cin >> cols;
+
+    // Declare the matrix as a 2D vector
+    vector<vector<double>> matrix;
+
+    // Input the matrix
+    inputMatrix(matrix, rows, cols);
+
+    // Display the column sums
+    displayColumnSums(matrix, rows, cols);
+
+    return 0;
 }
