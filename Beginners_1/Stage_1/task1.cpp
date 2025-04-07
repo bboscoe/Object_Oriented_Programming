@@ -23,6 +23,7 @@ int main(){
 	
 	*ptrA=30;
 	*ptrB=40;
+	//comment for pull request
 	
 	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
 	
