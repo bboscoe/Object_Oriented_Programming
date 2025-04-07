@@ -13,7 +13,7 @@ int main(){
 	int *ptrA=&a;
 	int *ptrB=&b;
 	
-	cout<<"Enter first number = ";
+	cout<<"Enter first number = "; //Enter the first number
 	cin>>a;
 	
 	cout<<"Enter second number = ";
