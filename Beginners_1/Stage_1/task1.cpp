@@ -7,25 +7,25 @@
   - Display the updated values of 'a' and 'b' using the pointers 'ptrA' and 'ptrB' respectively.
 */
 #include <iostream>
-using namespace std;
+
 int main(){
 	int a,b;
 	int *ptrA=&a;
 	int *ptrB=&b;
 	
-	cout<<"Enter first number = ";
-	cin>>a;
+	std::cout<<"Enter first number = ";
+	std::cin>>a;
 	
-	cout<<"Enter second number = ";
-	cin>>b;
+	std::cout<<"Enter second number = ";
+	std::cin>>b;
 	
-	cout<<"the values are = "<<*ptrA<<" & "<<*ptrB<<endl;
+	std::cout<<"the values are = "<<*ptrA<<" & "<<*ptrB<<std::endl;
 	
 	*ptrA=30;
 	*ptrB=40;
 	//comment for pull request
 	
-	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
+	std::cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
 	
 	return 0;
 }
