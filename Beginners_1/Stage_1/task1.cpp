@@ -13,6 +13,7 @@ int main(){
 	int *ptrA=&a;
 	int *ptrB=&b;
 	
+	// This takes the input from the user
 	cout<<"Enter first number = ";
 	cin>>a;
 	
