@@ -16,10 +16,18 @@ int main(){
 	int *ptrA=&a;
 	int *ptrB=&b;
 	
+	cout<<ptrA<<endl;
+
 	cout<<"Enter first number = ";
 	cin>>a;
 	
 	cout<<"Enter second number = ";
+	cin>>b;
+	
+	cout<<"the values are = "<<*ptrA<<" & "<<*ptrB<<endl;
+	
+	*ptrA=30;
+	*ptrB=40;
 	
 	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
 	
