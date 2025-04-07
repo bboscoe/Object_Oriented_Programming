@@ -28,6 +28,7 @@ hello hi hey
 run jog sprint
 big large huge
 quick fast rapid
+slow sluggish slowly
 
 Sample input and output:
 ------------------------
