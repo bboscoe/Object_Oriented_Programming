@@ -20,12 +20,6 @@ int main(){
 	cin>>a;
 	
 	cout<<"Enter second number = ";
-	cin>>b;
-	
-	cout<<"the values are = "<<*ptrA<<" & "<<*ptrB<<endl;
-	
-	*ptrA=30;
-	*ptrB=40;
 	
 	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
 	
