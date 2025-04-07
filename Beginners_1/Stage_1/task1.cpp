@@ -9,22 +9,27 @@
 #include <iostream>
 using namespace std;
 int main(){
-	int a,b;
+	int a,b,c;
 	int *ptrA=&a;
 	int *ptrB=&b;
+	int *ptrC=&c;
 	
 	cout<<"Enter first number = ";
 	cin>>a;
 	
 	cout<<"Enter second number = ";
 	cin>>b;
+
+	cout<<"Enter third number = ";
+	cin>>c;
 	
 	cout<<"the values are = "<<*ptrA<<" & "<<*ptrB<<endl;
 	
 	*ptrA=30;
 	*ptrB=40;
+	*ptrC=50;
 	
-	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB;
+	cout<<"Updated values of *ptrA and *ptrB are = "<<*ptrA<<" & "<<*ptrB <<"&"<<*ptrC;
 	
 	return 0;
 }
